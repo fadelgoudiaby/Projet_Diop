@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?><!-- Published by JAX-WS RI (http://jax-ws.java.net). RI's version is JAX-WS RI 2.2.9-b130926.1035 svn-revision#5f6196f2b90e9460065a4c2f4e30e065b245e51e. --><xs:schema xmlns:tns="http://servicesoap.dit2.esp.sn/" xmlns:xs="http://www.w3.org/2001/XMLSchema" version="1.0" targetNamespace="http://servicesoap.dit2.esp.sn/">
+
+<xs:element name="authentication" type="tns:authentication"></xs:element>
+
+<xs:element name="authenticationResponse" type="tns:authenticationResponse"></xs:element>
+
+<xs:element name="create" type="tns:create"></xs:element>
+
+<xs:element name="createResponse" type="tns:createResponse"></xs:element>
+
+<xs:element name="deconnexion" type="tns:deconnexion"></xs:element>
+
+<xs:element name="deconnexionResponse" type="tns:deconnexionResponse"></xs:element>
+
+<xs:element name="delete" type="tns:delete"></xs:element>
+
+<xs:element name="deleteResponse" type="tns:deleteResponse"></xs:element>
+
+<xs:element name="getAll" type="tns:getAll"></xs:element>
+
+<xs:element name="getAllResponse" type="tns:getAllResponse"></xs:element>
+
+<xs:element name="update" type="tns:update"></xs:element>
+
+<xs:element name="updateResponse" type="tns:updateResponse"></xs:element>
+
+<xs:element name="user" type="tns:user"></xs:element>
+
+<xs:complexType name="getAll">
+<xs:sequence></xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="getAllResponse">
+<xs:sequence>
+<xs:element name="return" type="tns:user" minOccurs="0" maxOccurs="unbounded"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="user">
+<xs:sequence>
+<xs:element name="id" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="login" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="nom" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="password" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="prenom" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="profil" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deconnexion">
+<xs:sequence>
+<xs:element name="login" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="password" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deconnexionResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="update">
+<xs:sequence>
+<xs:element name="arg0" type="tns:user" minOccurs="0"></xs:element>
+<xs:element name="login" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="password" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="updateResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="create">
+<xs:sequence>
+<xs:element name="arg0" type="tns:user" minOccurs="0"></xs:element>
+<xs:element name="login" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="password" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="createResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="authentication">
+<xs:sequence>
+<xs:element name="login" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="password" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="authenticationResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:boolean"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="delete">
+<xs:sequence>
+<xs:element name="id" type="xs:long" minOccurs="0"></xs:element>
+<xs:element name="login" type="xs:string" minOccurs="0"></xs:element>
+<xs:element name="password" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="deleteResponse">
+<xs:sequence>
+<xs:element name="return" type="xs:string" minOccurs="0"></xs:element>
+</xs:sequence>
+</xs:complexType>
+</xs:schema>
